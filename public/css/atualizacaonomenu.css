@@ -1,0 +1,592 @@
+/************* alteração no header ************/
+
+/*
+.header .navbar{
+    width: 100%;
+	height: 10rem;
+	background: var(--light);
+    box-shadow: var(--box-shadow);
+    -webkit-transition: 2s;
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+	grid-gap: 24px;
+	top: -2.1rem;
+	left: 0;
+    right: 0;
+	z-index: 1000;
+    position: fixed;
+    text-transform: uppercase;
+    padding: 1rem 4%;
+	border-bottom-left-radius:25%;
+	border-bottom-right-radius: 25%;
+    border-bottom: .4rem solid var(--yellow);
+}
+
+*/
+/*******************Sub menu categoria*************************/
+nav#categoria {
+    float: left;
+    left: 2%;
+    width: 100%;
+    height:auto;
+    margin: 0;
+    position: absolute;
+    transition:2s;
+    justify-content: center;
+    z-index: 1;
+}
+
+nav#categoria ul{
+    width: 100%;
+    margin: 1px 0px;
+    top:-6rem;
+    list-style: none;
+    position: absolute;
+    padding-left:-40%;
+    box-sizing: border-box;
+    display: flexbox;
+    justify-content: center;
+    text-align: center;
+    
+}
+nav#categoria  ul li{
+    width:10%;
+    height:auto;
+    display: inline-block;
+    position: relative;
+    padding:3px;
+    border:none;
+}
+input[type="checkbox"]{display: none;}
+
+
+/* Este codigo sera utilizado se o usuario iniciar sessao e estiver na home
+*Imagem
+*Admin
+*Sair
+*/
+
+/* Navbar styling */
+.user_info_menu {
+    
+    background-color:transparent;
+    font-family:(--poppins);
+    
+}
+
+.user_info_menu ul {
+    list-style: none;
+    display: flex;
+    padding: 2rem;
+    
+}
+
+.user_info_menu li {
+    position: relative;
+    justify-content: left;
+    justify-items: left;
+    
+}
+
+.user_info_menu a {
+    color:var(--red);
+    padding: 2rem;
+    text-decoration: none;
+    display: block;
+    text-align:left;
+}
+.user_info_menu p{
+        font-size: 1.5rem;
+        color: var(--red);
+        padding: 1rem;
+        text-align: center;    
+}
+
+/* Change background color on hover */
+.navbar a:hover {
+    background-color:transparent;
+}
+
+
+/* Dropdown Container  */
+.dropdown {
+    position: relative;
+    width: 100%;
+    
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width:100%;
+    color:var(--red);
+    z-index: 1;
+    margin:auto auto 0 -10rem;
+    
+}
+
+.dropdown-content a {
+    font-size: 1.5rem;
+    color:var(--red);
+    padding: 3rem 1rem 1rem 0;
+    
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+    background-color:transparent;
+    color:var(--red);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display:block;
+    color: (--yellow);
+}
+
+/************* search button ****************/
+
+.search-container {
+    font-family: var(--montserrat);
+    display: flex;
+    align-items: center;
+    float:right;
+    right: 8rem;
+  }
+  
+  .search-btn {
+    font-family: var(--montserrat);
+    padding: .8rem;
+    width: 4rem;
+    font-size: 14pt;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius:0 1.2rem 1.2rem 0;
+    
+  }
+  
+  
+  .search-box {
+    font-family: var(--montserrat);
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    width: 0;
+    height: 40px;
+    margin-right: -5rem;
+    float: right;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .search-box input {
+    font-family: var(--montserrat);
+    padding: 10px;
+    width: 30rem;
+    font-size: 14px;
+    border-radius: 2.5rem;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-left: -2rem;
+  }
+  
+  .search-box.active {
+    font-family: var(--montserrat);
+    width: 300px;
+    opacity: 1;
+  }
+
+  
+ /************* custom css mensagem de alerta*************/
+
+ /************* custom css lista de pesquisa por categoria*************/
+/***container geral ***/
+
+.container-geral{
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:transparent;
+    box-sizing: border-box;
+}
+.container-geral .container-category{
+background-color: transparent;
+width:100%;
+box-sizing: border-box;
+
+}
+.container-geral .container-category .rows{
+    display: none;
+}
+
+/***input group search categorias ***/
+.container-geral .container-category .input-group{
+    width:45%;
+    background-color: #fffdfd;
+    display: flex;
+    padding: 8px 16px 8px 8px;
+    border-radius: 24px;
+    gap: 8px;
+    margin: 4rem auto 4rem auto;
+   
+}
+.container-geral .container-category .input-group:hover{
+    outline:2px solid var(--yellow);
+}
+
+.container-geral .container-category .input-group .input-icon{
+    min-width: 32px;
+    min-height: 32px;
+    background-color: var(--red);
+    color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:0 1.2rem 1.2rem 0;
+    font-size: 12pt;
+}
+.container-geral .container-category .input-group .input-field{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+}
+.container-geral .container-category .input-group .input-field:focus{
+    outline: none;
+}
+.container-geral .container-category .conteiner-list{
+    background-color: transparent;
+    width: 100%;
+    min-height:90vh;
+    display: flex;
+}
+.container-geral .container-category .conteiner-list .rows #categoria{
+    display: none;
+}
+.container-geral .container-category .conteiner-list .items-menu{
+    width: 20%;
+    list-style: none;
+    background-color:transparent;
+    border-radius: 0px 24px 24px 0px;
+    padding: 4rem 2rem 2rem 2rem;
+    background-color: whitesmoke;
+}
+.container-geral .container-category .conteiner-list .items-menu .item label i{
+    width:100%;
+}
+.container-geral .container-category .conteiner-list .items-menu .rows{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    outline:0.5px solid var(--dark);
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+.container-geral .container-category .conteiner-list .items-menu .rows .input-preco{
+    clear: both;
+    display: flex;
+    width: 50px;
+    max-width: 50px;
+    height:40px;
+    max-height:41px;
+    justify-content: space-between;
+    text-align: center;
+}
+.container-geral .container-category .conteiner-list .items-menu .item p{
+    display: flex;
+    font-size:10pt;
+    color:black;
+    line-height: 1.8;
+    padding: 1rem 2rem;
+    text-align: justify;
+}
+
+.container-geral .container-category .conteiner-list .items-menu .item .checkboxcategory{
+    display: block;
+    color: var(--red) !important;
+    background-color: var(--red) !important;
+
+}
+.container-geral .container-category .conteiner-list .items-menu .item input[type="checkbox"]:checked ~{
+background-color: var(--red);
+}
+.container-geral .container-category .conteiner-list .items-menu .rows hr{
+    width:80%;
+    border: 2px solid rgba(0, 0, 0, 0.10);
+}
+.container-geral .container-category .conteiner-list .items{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    margin-top: 12px;
+    background-color:transparent;
+    border-radius: 24px;
+    padding: 14px;
+    width: 79%;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.container-geral .container-category .conteiner-list .items .separador{
+    display: flex;
+}
+.container-geral .container-category .conteiner-list .items .separador-line{
+    width:80%;
+    border: none;
+    border-bottom:0.2px solid rgba(0, 0, 0, 0.10);
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0px 2rem 0px;
+}
+.container-geral .container-category .conteiner-list .items hr{
+    width:80%;
+    border: 0.2px solid rgba(0, 0, 0, 0.10);
+}
+.container-geral .container-category .conteiner-list .item{
+    display: flex;
+    width: 80%;
+    border-bottom: 0.2px solid  rgba(0, 0, 0, 0.10);
+    padding: 2rem 0px 2rem 0px;
+}
+
+.container-geral .container-category .conteiner-list .item .content-lists{
+    flex: 1 1 40rem;
+    padding: 2rem;
+}
+
+.container-geral .container-category .conteiner-list .item .content-lists h3{
+    font-size: 20pt;
+    color: var(--red);
+}
+
+.container-geral .container-category .conteiner-list .item .content-lists h3 span{
+    color: var(--yellow);
+}
+
+.container-geral .container-category .conteiner-list .item .content-lists p{
+    font-size:12pt;
+    color: var(--dark);
+    line-height: 1.8;
+    padding: 1rem 0;
+    text-align: justify;
+}
+
+.container-geral .container-category .conteiner-list .item i{
+    color: var(--yellow);
+}
+/**** imagens ***/
+
+.container-geral .container-category .conteiner-list .item .item-image{
+    width: 22rem;
+    height: 24vh;
+}
+.container-geral .container-category .conteiner-list .item .item-image img{
+    width: 20rem;
+    height: 22vh;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.container-geral .container-category .conteiner-list .items #resultadoNaoEncontrado{
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+@media(max-width:88rem) {
+    .container-geral{
+        width:100%;
+        min-height: 100vh;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        background-color:transparent;
+        box-sizing: border-box;
+    }
+    .container-geral .container-category{
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        width:100%;
+        height:100vh;
+        max-height: 100vh;
+        max-width: 100%;
+    }
+    .container-geral .container-category .rows{
+        display: block;
+        position: relative;
+        margin-top:10rem;
+        justify-content: space-between;
+    }
+    .container-geral .container-category .rows a{
+        text-decoration: none;
+        color: var(--red);
+        font-size: 2rem;
+        
+    }
+    
+    
+    /***input group search categorias ***/
+    .container-geral .container-category .input-group{
+        width:80%;
+        background-color: #fffdfd;
+        display: flex;
+        padding: 8px 16px 8px 8px;
+        border-radius: 24px;
+        gap: 8px;
+        margin: 4rem auto 4rem auto;
+       
+    }
+    .container-geral .container-category .input-group:hover{
+        outline:2px solid var(--yellow);
+    }
+    
+    .container-geral .container-category .input-group .input-icon{
+        min-width: 32px;
+        min-height: 32px;
+        background-color: var(--red);
+        color: var(--yellow);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius:0 1.2rem 1.2rem 0;
+        font-size: 12pt;
+    }
+    .container-geral .container-category .input-group .input-field{
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        font-size: 6pt;
+    }
+    .container-geral .container-category .input-group .input-field:focus{
+        outline: none;
+    }
+    .container-geral .container-category .conteiner-list{
+        background-color: transparent;
+        width: 100%;
+        height:100vh;
+        max-height:100vh;
+        display: block;
+    }
+    .container-geral .container-category .conteiner-list .items-menu{
+        width: 20%;
+        list-style: none;
+        background-color:transparent;
+        border-radius: 0px 24px 24px 0px;
+        padding: 4rem 2rem 2rem 2rem;
+        background-color: whitesmoke;
+        display: none;
+    }
+    .container-geral .container-category .conteiner-list .items-menu .item .content a{
+        cursor:pointer;
+    }
+    .container-geral .container-category .conteiner-list .items{
+        width:90%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
+.container-geral .container-category .conteiner-list .items .separador{
+    display: flex;
+}
+.container-geral .container-category .conteiner-list .items .separador-line{
+    width:80%;
+    border: none;
+    border-bottom:0.2px solid rgba(0, 0, 0, 0.10);
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0px 2rem 0px;
+}
+.container-geral .container-category .conteiner-list .items hr{
+    width:80%;
+    border: 0.2px solid rgba(0, 0, 0, 0.10);
+}
+.container-geral .container-category .conteiner-list .item{
+    display: block;
+    width:100%;
+    border-bottom:70rem solid  rgba(0, 0, 0, 0.10);
+    padding: 2rem 0px 2rem 0px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-geral .container-category .conteiner-list .item .content-lists{
+    flex: 1 1 40rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.container-geral .container-category .conteiner-list .item .content-lists h3{
+    font-size: 13pt;
+    color: var(--red);
+}
+
+.container-geral .container-category .conteiner-list .item .content-lists h3 span{
+    color: var(--yellow);
+
+}
+
+.container-geral .container-category .conteiner-list .item .content-lists p{
+    display: block;
+    font-size:8pt;
+    color: var(--dark);
+    line-height: 1.8;
+    padding: 1rem 0;
+    text-align: justify;
+    text-align: center;
+    cursor: pointer;
+}
+.container-geral .container-category .conteiner-list .item .content-lists p a{
+    clear: both !important;
+    text-decoration: none;
+    font-size:8pt;
+    color:var(--dark);
+    line-height: 1.8;
+    padding: 1rem 0;
+    text-align: justify;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container-geral .container-category .conteiner-list .item i{
+    color: var(--yellow);
+}
+/**** imagens ***/
+
+.container-geral .container-category .conteiner-list .item .item-image{
+     display: block;
+     width: 22rem;
+    height: 24vh;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0px;
+    box-sizing: border-box;
+
+}
+.container-geral .container-category .conteiner-list .item .item-image img{
+    width:30em;
+    height:20vh;
+    object-fit: cover;
+    border-radius:25px;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+   
+}
+.container-geral .container-category .conteiner-list .items #resultadoNaoEncontrado{
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+   
+}
+}
